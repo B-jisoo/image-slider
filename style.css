@@ -1,17 +1,21 @@
 @import "reset.css";
 
+.wrap {
+  margin: 100px 0px;
+}
 .section {
-  margin-top: 100px;
+  margin-top: 30px;
 }
 
 .section input[id*="slide"] {
   display: none;
 }
-
+/* 배너 최대크기 설정 */
 .section .slidewrap {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
 }
 
 .section .slidelist {
@@ -28,14 +32,14 @@
 
 .section .slidelist > li > a {
   display: block;
-  position: relative;
 }
 
 .section .slidelist > li > a img {
   width: 100%;
 }
-
-.section .slidelist label {
+/* 배너 화살표 설정 */
+.section .slidelist label,
+.controls > div {
   position: absolute;
   z-index: 10;
   top: 50%;
@@ -47,28 +51,11 @@
 .section .slidelist .left {
   left: 30px;
   background: url("image/left2.png") center center / 100% no-repeat;
-  /* 
-  background-image: url(../img/img.jpg);
-  background-position:center center;
-  background-size: 100%; 
-  background-repeat:no-repeat;
-  */
 }
 .section .slidelist .right {
   right: 30px;
   background: url("image/right2.png") center center / 100% no-repeat;
 }
-
-/* .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {
-  transform: translateX(0%);
-}
-
-.section [id="slide02"]:checked ~ .slidewrap .slidelist > li {
-  transform: translateX(-100%);
-}
-.section [id="slide03"]:checked ~ .slidewrap .slidelist > li {
-  transform: translateX(-200%);
-} */
 
 .section #slide01:checked ~ .slidewrap .slidelist > li {
   transform: translateX(0%);
@@ -79,4 +66,19 @@
 }
 .section #slide03:checked ~ .slidewrap .slidelist > li {
   transform: translateX(-200%);
+}
+
+/* html과 css으로 만든 슬라이드 끝 */
+
+.section .controls .left {
+  left: 30px;
+  background: url("image/left2.png") center center / 100% no-repeat;
+}
+.section .controls .right {
+  right: 30px;
+  background: url("image/right2.png") center center / 100% no-repeat;
+}
+
+.slidelist2 {
+  transition: all 0.5s;
 }

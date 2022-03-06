@@ -34,9 +34,10 @@ const firstSlide = document.querySelector(".swiper-slide:first-child");
 
 function slide() {
   const currentSlide = document.querySelector(`.${SHOWING_CLASS}`);
-
+  //showing 클래스를 가지고 있다면 참을 반환 없다면 null
   if (currentSlide) {
     currentSlide.classList.remove(SHOWING_CLASS);
+    // 다음 요소를 가져옴 다음 요소가 없다면 null
     const nextSlide = currentSlide.nextElementSibling;
     if (nextSlide) {
       nextSlide.classList.add(SHOWING_CLASS);

@@ -74,6 +74,7 @@
   left: 30px;
   background: url("image/left2.png") center center / 100% no-repeat;
 }
+
 .section .controls .right {
   right: 30px;
   background: url("image/right2.png") center center / 100% no-repeat;
@@ -86,12 +87,16 @@
 /* slide3 */
 .section2 {
   margin-top: 30px;
+  height: 600px;
+}
+.section2 .slidewrap {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
 }
 
 .slide {
-  max-width: 800px;
   position: relative;
-  margin: 0 auto;
 }
 .swiper-slide {
   width: 100%;
@@ -112,4 +117,62 @@
   z-index: 10;
   opacity: 1;
   transform: none;
+}
+
+/* section3 */
+
+.section3 .slidewrap2 {
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.section3 .slides {
+  width: 400%;
+  font-size: 0;
+  display: flex;
+}
+
+.slides .auto-slide img {
+  width: 100%;
+}
+.navigation-left,
+.navigation-right {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 50px;
+  cursor: pointer;
+}
+
+.navigation-btn .navigation-left {
+  left: 30px;
+  background: url("image/left2.png") center center / 100% no-repeat;
+}
+.navigation-btn .navigation-right {
+  right: 30px;
+  background: url("image/right2.png") center center / 100% no-repeat;
+}
+
+.section3 .navigation-manual-area {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  display: flex;
+}
+.navigation-manual-area .navigation-manual {
+  width: 350px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navigation-manual-area .swiper-pagination-bullet {
+  width: 23px;
+  height: 23px;
+  margin-right: 15px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
 }
